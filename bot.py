@@ -41,6 +41,7 @@ async def overridedisable(ctx, member : discord.Member= None):
     await ctx.send("Hello {} your override mode is off!!".format(member.mention))
 
 @bot.command()
+@commands.owner_id()
 async def pingspam(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("{}".format(member.mention))
