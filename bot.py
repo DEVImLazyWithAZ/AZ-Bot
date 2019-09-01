@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands, tasks
 
 bot = commands.Bot(command_prefix="*")
@@ -23,3 +24,5 @@ async def ping(ctx):
 async def yeet(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send(f"{member} get yeeted!")
+
+bot.run(os.getenv('TOKEN'))
