@@ -31,7 +31,7 @@ async def yeet(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("{} get yeeted!".format(member.mention))
 
-    @bot.command()
+@bot.command()
 async def IdleGuild(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("Join the Idle Miner guild by Direct Messaging @ImLazyWithAZ#8327!")
@@ -64,6 +64,7 @@ async def help(ctx):
     embed.add_field(name="*yeet [@member]", value="Yeets someone.", inline=False)
     embed.add_field(name="*hello", value="Says hello to you.", inline=False)
     embed.add_field(name="*creepah", value="Aww man.", inline=False)
+    embed.add_field(name="*IdleGuild", value="Join the Idle Miner Guild!.", inline=False)
     embed.set_footer(text=f"Request by {ctx.author}", icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
