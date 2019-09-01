@@ -23,12 +23,12 @@ async def ping(ctx):
 @bot.command()
 async def yeet(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
-    await ctx.send(f"{member} get yeeted!")
+    await ctx.send(f"{} get yeeted!".format(ctx.member.mention))
 
 @bot.command()
 async def hello(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
-    await ctx.send(f"Hello @{member} !")
+    await ctx.send(f"Hello {}!".format(ctx.member.mention))
 
 @bot.event
 async def on_command_error(ctx, error):
