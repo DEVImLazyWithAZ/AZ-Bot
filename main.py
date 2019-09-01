@@ -21,5 +21,5 @@ async def ping(ctx):
 
 @bot.command()
 async def yeet(ctx, member : discord.Member= None):
-  member = ctx.author if not member else member
-  await ctx.send(f"{member} get yeeted!")
+    member = ctx.author if not member else member
+    await ctx.send(f"{member} get yeeted!")
