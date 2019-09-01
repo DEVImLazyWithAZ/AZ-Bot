@@ -43,7 +43,26 @@ async def overridedisable(ctx, member : discord.Member= None):
 @bot.command()
 async def pingspam(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
-    await ctx.send("{} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
 
 
 @bot.event
