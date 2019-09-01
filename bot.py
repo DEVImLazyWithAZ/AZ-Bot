@@ -59,7 +59,7 @@ async def help(ctx):
     await ctx.send(embed=embed)
     
 @bot.command()
-@commands.has_any_role("yeeticanpingspam")
+@commands.has_any_role("AzImLazy")
 async def pingspam(ctx, member : discord.Member= None):
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
@@ -172,7 +172,7 @@ async def on_command_error(ctx, error):
     elif isinstance(error, commands.MissingRole):
         roleid = error.missing_role
         embed = discord.Embed(title="Error:",
-                              description=f"You don't have permission to execute `{ctx.invoked_with}`, this requires the `{roleid}` role to be executed",
+                              description=f"You don't have permission to execute `{ctx.invoked_with}`.",
                               colour=0xe73c24)
         await ctx.send(embed=embed)
     else:
