@@ -28,7 +28,7 @@ async def yeet(ctx, member : discord.Member= None):
 @bot.command()
 async def hello(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
-    await ctx.send(f"Hello @{member}!")
+    await ctx.send(f"Hello @{member} !")
 
 @bot.event
 async def on_command_error(ctx, error):
