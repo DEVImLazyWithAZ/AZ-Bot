@@ -165,7 +165,7 @@ async def pingspam(ctx, member : discord.Member= None):
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
-    await ctx.send("{}".format(member.mention)) await ctx.send("{}".format(member.mention))
+    await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
