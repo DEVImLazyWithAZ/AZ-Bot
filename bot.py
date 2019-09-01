@@ -70,7 +70,7 @@ async def help(ctx):
     await ctx.send(embed=embed)
     
 @bot.command()
-@commands.has_any_role("lolazimlazy")
+if is_owner()
 async def pingspam(ctx, member : discord.Member= None):
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
