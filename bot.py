@@ -40,6 +40,22 @@ async def overridedisable(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("Hello {} your override mode is off!!".format(member.mention))
 
+
+@bot.command()
+async def help(ctx):
+    embed = discord.Embed(
+        title="AZ's bot", description="Commands:", color=0x7289DA)
+
+    embed.set_thumbnail(
+        url='https://images.emojiterra.com/twitter/v12/512px/1f3d3.png')
+    embed.add_field(name="*ping", value="Pings the bot.", inline=False)
+    embed.add_field(name="*help", value="Gives this message.", inline=False)
+    embed.add_field(name="*yeet [@member]", value="Yeets someone.", inline=False)
+    embed.add_field(name="*hello", value="Says hello to you.", inline=False)
+    embed.set_footer(text=f"Request by {ctx.author}", icon_url=ctx.author.avatar_url)
+
+    await ctx.send(embed=embed)
+    
 @bot.command()
 @commands.has_any_role("yeeticanpingspam")
 async def pingspam(ctx, member : discord.Member= None):
