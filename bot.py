@@ -21,7 +21,7 @@ async def ping(ctx):
     embed.add_field(name="Ping", value=f'🏓 {round(bot.latency * 1000 / 2)}ms')
     embed.set_footer(text=f"Request by {ctx.author}", icon_url=ctx.author.avatar_url)
     await ctx.send(embed=embed)
-
+    
 @bot.command()
 async def creepah(ctx):
     await ctx.send("Aww man so we back in the mines got our pickaxe swinging from side to side side side to side This task a grueling one hope to find some diamonds tonight, night, night, diamonds tonight. Heads up. You hear a sound turn around and look up. Total shock fills your body, Oh no it's you again, I can never forget those eyes eyes eyes, eyes eyes eyes Cause baby tonight, the creeper's tryin' to steal all our stuff again Cause baby tonight, you grab your pick shovel and bolt again, bolt again, gain           ImLazyWithAZ was to lazy to put the rest of the song in so that's all")
@@ -31,6 +31,11 @@ async def yeet(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("{} get yeeted!".format(member.mention))
 
+    @bot.command()
+async def IdleGuild(ctx, member : discord.Member= None):
+    member = ctx.author if not member else member
+    await ctx.send("{}! Join the guild by Direct Messaging @ImLazyWithAZ#8327!".format(member.mention))
+    
 @bot.command()
 async def hello(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
