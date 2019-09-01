@@ -30,6 +30,11 @@ async def hello(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("Hello {}!".format(member.mention))
 
+@bot.command()
+async def override.enable(ctx, member : discord.Member= None):
+    member = ctx.author if not member else member
+    await ctx.send("Hello {} your override mode is on!!".format(member.mention))
+
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
