@@ -25,4 +25,11 @@ async def yeet(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send(f"{member} get yeeted!")
 
+@bot.command()
+async def hello(ctx, member : discord.Member= None):
+    member = ctx.author if not member else member
+    await ctx.send(f"Hello @{member}!")
+
+
+
 bot.run(os.getenv('TOKEN'))
