@@ -34,7 +34,7 @@ async def yeet(ctx, member : discord.Member= None):
     @bot.command()
 async def IdleGuild(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
-    await ctx.send("{}! Join the guild by Direct Messaging @ImLazyWithAZ#8327!".format(member.mention))
+    await ctx.send("Join the Idle Miner guild by Direct Messaging @ImLazyWithAZ#8327!")
     
 @bot.command()
 async def hello(ctx, member : discord.Member= None):
