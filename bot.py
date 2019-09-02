@@ -24,12 +24,12 @@ async def ping(ctx):
     
 @bot.command()
 async def say(ctx, *, args):
+    await ctx.message.delete() 
     output = ''
     for word in args:
         output += word
         output += ''
     await ctx.send(output)
-    await ctx.message.delete() 
     
 @bot.command()
 async def creepah(ctx):
