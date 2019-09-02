@@ -74,6 +74,7 @@ async def help(ctx):
     embed.add_field(name="*hello", value="Says hello to you.", inline=False)
     embed.add_field(name="*creepah", value="Aww man.", inline=False)
     embed.add_field(name="*IdleGuild", value="Join the Idle Miner Guild!.", inline=False)
+    embed.add_field(name="*say", value="Says what you want!.", inline=False)
     embed.set_footer(text=f"Request by {ctx.author}", icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
