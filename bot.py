@@ -23,41 +23,13 @@ async def ping(ctx):
     await ctx.send(embed=embed)
     
 @bot.command()
-async def spam(ctx, *, args):
+async def say(ctx, *, args):
     output = ''
     for word in args:
         output += word
         output += ''
     await ctx.send(output)
     await ctx.message.delete() 
-    
-@bot.command()
-async def spam(ctx, *, args):
-    output = ''
-    for word in args:
-        output += word
-        output += ''
-    await ctx.send(output)
-    await ctx.message.delete() 
-    
-@bot.command()
-async def spam(ctx, *, args):
-    output = ''
-    for word in args:
-        output += word
-        output += ''
-    await ctx.send(output)
-    await ctx.message.delete() 
-
-@bot.command()
-async def spam(ctx, *, args):
-    output = ''
-    for word in args:
-        output += word
-        output += ''
-    await ctx.send(output)
-    await ctx.message.delete() 
-
     
 @bot.command()
 async def creepah(ctx):
