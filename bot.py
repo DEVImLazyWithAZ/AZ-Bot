@@ -22,6 +22,45 @@ async def ping(ctx):
     embed.set_footer(text=f"Request by {ctx.author}", icon_url=ctx.author.avatar_url)
     await ctx.send(embed=embed)
     
+    @bot.command()
+async def spam(ctx, *, args):
+    output = ''
+    for word in args:
+        output += word
+        output += ''
+    await ctx.send(output)
+        output = ''
+    for word in args:
+        output += word
+        output += ''
+    await ctx.send(output)
+        output = ''
+    for word in args:
+        output += word
+        output += ''
+    await ctx.send(output)
+        output = ''
+    for word in args:
+        output += word
+        output += ''
+    await ctx.send(output)
+        output = ''
+    for word in args:
+        output += word
+        output += ''
+    await ctx.send(output)
+        output = ''
+    for word in args:
+        output += word
+        output += ''
+    await ctx.send(output)
+        output = ''
+    for word in args:
+        output += word
+        output += ''
+    await ctx.send(output)
+    await ctx.message.delete() 
+    
 @bot.command()
 async def creepah(ctx):
     await ctx.send("Aww man so we back in the mines got our pickaxe swinging from side to side side side to side This task a grueling one hope to find some diamonds tonight, night, night, diamonds tonight. Heads up. You hear a sound turn around and look up. Total shock fills your body, Oh no it's you again, I can never forget those eyes eyes eyes, eyes eyes eyes Cause baby tonight, the creeper's tryin' to steal all our stuff again Cause baby tonight, you grab your pick shovel and bolt again, bolt again, gain           ImLazyWithAZ was to lazy to put the rest of the song in so that's all")
@@ -36,83 +75,6 @@ async def IdleGuild(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("Join the Idle Miner guild by Direct Messaging @ImLazyWithAZ#8327!")
     
-@bot.command()
-async def spam(ctx, arg):
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send(arg)
-    await ctx.send("Sorry it took so long to end :/ The speeds on Heroku are pretty low.")
-
-
 @bot.command()
 async def hello(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
