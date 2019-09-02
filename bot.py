@@ -37,6 +37,11 @@ async def IdleGuild(ctx, member : discord.Member= None):
     await ctx.send("Join the Idle Miner guild by Direct Messaging @ImLazyWithAZ#8327!")
     
 @bot.command()
+async def test(ctx, arg):
+    await ctx.send(arg)
+
+
+@bot.command()
 async def hello(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("Hello {}!".format(member.mention))
@@ -70,7 +75,7 @@ async def help(ctx):
     await ctx.send(embed=embed)
     
 @bot.command()
-@commands.has_any_role("lolazimlazy")
+@commands.has_any_role("Owner")
 async def pingspam(ctx, member : discord.Member= None):
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
