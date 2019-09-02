@@ -49,15 +49,6 @@ async def IdleGuild(ctx, member : discord.Member= None):
 async def hello(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("Hello {}!".format(member.mention))
-
-@client.event
-@asyncio.coroutine
-def on_message(message):
-    if message.content.startswith('*oof'):
-        if message.author.id == "293085564171714560":
-            yield from client.say('Are you sure???')
-            msg = yield from client.wait_for_message(author=message.author, content='yes')
-            yield from client.say("oofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoof")
     
 @bot.command()
 async def overrideenable(ctx, member : discord.Member= None):
