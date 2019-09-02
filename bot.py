@@ -22,7 +22,7 @@ async def ping(ctx):
     embed.set_footer(text=f"Request by {ctx.author}", icon_url=ctx.author.avatar_url)
     await ctx.send(embed=embed)
     
-    @bot.command()
+@bot.command()
 async def spam(ctx, *, args):
     output = ''
     for word in args:
@@ -31,7 +31,7 @@ async def spam(ctx, *, args):
     await ctx.send(output)
     await ctx.message.delete() 
     
-    @bot.command()
+@bot.command()
 async def spam(ctx, *, args):
     output = ''
     for word in args:
@@ -40,7 +40,7 @@ async def spam(ctx, *, args):
     await ctx.send(output)
     await ctx.message.delete() 
     
-     @bot.command()
+@bot.command()
 async def spam(ctx, *, args):
     output = ''
     for word in args:
@@ -49,7 +49,7 @@ async def spam(ctx, *, args):
     await ctx.send(output)
     await ctx.message.delete() 
 
-    @bot.command()
+@bot.command()
 async def spam(ctx, *, args):
     output = ''
     for word in args:
