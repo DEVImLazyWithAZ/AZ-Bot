@@ -29,37 +29,35 @@ async def spam(ctx, *, args):
         output += word
         output += ''
     await ctx.send(output)
-        output = ''
-    for word in args:
-        output += word
-        output += ''
-    await ctx.send(output)
-        output = ''
-    for word in args:
-        output += word
-        output += ''
-    await ctx.send(output)
-        output = ''
-    for word in args:
-        output += word
-        output += ''
-    await ctx.send(output)
-        output = ''
-    for word in args:
-        output += word
-        output += ''
-    await ctx.send(output)
-        output = ''
-    for word in args:
-        output += word
-        output += ''
-    await ctx.send(output)
-        output = ''
+    await ctx.message.delete() 
+    
+    @bot.command()
+async def spam(ctx, *, args):
+    output = ''
     for word in args:
         output += word
         output += ''
     await ctx.send(output)
     await ctx.message.delete() 
+    
+     @bot.command()
+async def spam(ctx, *, args):
+    output = ''
+    for word in args:
+        output += word
+        output += ''
+    await ctx.send(output)
+    await ctx.message.delete() 
+
+    @bot.command()
+async def spam(ctx, *, args):
+    output = ''
+    for word in args:
+        output += word
+        output += ''
+    await ctx.send(output)
+    await ctx.message.delete() 
+
     
 @bot.command()
 async def creepah(ctx):
