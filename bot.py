@@ -3,7 +3,7 @@ import os
 from discord.ext import commands, tasks
 
 bot = commands.Bot(command_prefix="*")
-bot = commands.Bot(command_prefix="@AZ'S bot")
+
 @bot.event
 async def on_ready():
     print("--------------------")
