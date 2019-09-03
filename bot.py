@@ -51,7 +51,6 @@ async def hello(ctx, member : discord.Member= None):
     await ctx.send("Hello {}!".format(member.mention))
     
 @bot.command()
-@commands.has_any_role("Ping 10")
 async def 10pings(ctx, member : discord.Member= None):
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
