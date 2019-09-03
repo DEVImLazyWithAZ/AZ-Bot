@@ -279,6 +279,7 @@ async def pingspam(ctx, member : discord.Member= None):
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
-    
+    await ctx.send("Hello {}. I'm sorry that the process took so long. Heroku speeds SUCK".format(member.mention))
+
         
 bot.run(os.getenv('TOKEN'))
