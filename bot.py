@@ -38,7 +38,7 @@ async def creepah(ctx):
 @bot.command()
 async def yeet(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
-    await ctx.send("{} get yeeted!".format(member.mention))
+    await ctx.send("{} get yeeted boyo!".format(member.mention))
 
 @bot.command()
 async def IdleGuild(ctx, member : discord.Member= None):
