@@ -36,7 +36,7 @@ async def creepah(ctx):
     await ctx.send("Aww man so we back in the mines got our pickaxe swinging from side to side side side to side This task a grueling one hope to find some diamonds tonight, night, night, diamonds tonight. Heads up. You hear a sound turn around and look up. Total shock fills your body, Oh no it's you again, I can never forget those eyes eyes eyes, eyes eyes eyes Cause baby tonight, the creeper's tryin' to steal all our stuff again Cause baby tonight, you grab your pick shovel and bolt again, bolt again, gain,            ImLazyWithAZ was to lazy to put the rest of the song in so that's all")
     
     @bot.command()
-async def alanrespect(ctx):
+async def alan(ctx):
     await ctx.send("#RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN #RESPECTFORALAN")
     
 @bot.command()
