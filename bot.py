@@ -2,7 +2,7 @@ import discord
 import os
 from discord.ext import commands, tasks
 
-bot = commands.Bot(command_prefix="*,azbot")
+bot = commands.Bot(command_prefix="*")
 
 @bot.event
 async def on_ready():
