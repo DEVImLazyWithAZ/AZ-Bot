@@ -15,7 +15,7 @@ async def on_ready():
 
 @bot.event
 async def on_ready():
-    server = bot.get_server("618207516311945216")
+    server = client.bot.get_server("618207516311945216")
     await bot.send_message(bot.get_channel("619281826607005707"), "BOT LAUNCHED")
 
 bot.remove_command('help')
