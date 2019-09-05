@@ -2,7 +2,7 @@ import discord
 import os
 from discord.ext import commands, tasks
 
-bot = commands.Bot(command_prefix="*")
+bot = commands.Bot(command_prefix="*,azbot")
 
 @bot.event
 async def on_ready():
@@ -12,10 +12,6 @@ async def on_ready():
     print(bot.user.id)
     print('--------------------')
     return
-
-@bot.event
-async def on_ready():
-    await bot.change_presence(game=discord.Game(name="https://discord.gg/NJ9mr9C! is the server!"), status=discord.Status("Online"))
 
 bot.remove_command('help')
 
