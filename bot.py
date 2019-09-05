@@ -15,7 +15,7 @@ async def on_ready():
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name="YOUR GAME"), status=discord.Status("STATUS"))
+    await bot.change_presence(game=discord.Game(name="https://discord.gg/NJ9mr9C! is the server!"), status=discord.Status("Online"))
 
 bot.remove_command('help')
 
