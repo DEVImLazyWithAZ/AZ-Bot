@@ -48,11 +48,87 @@ async def yeet(ctx, member : discord.Member= None):
 async def IdleGuild(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("Join the Idle Miner guild by Direct Messaging @ImLazyWithAZ#8327!")
+
+@bot.command()
+@commands.has_permissions(ban_members=True)
+async def ban(ctx, member: discord.Member, *, reason='No reason provided.'):
+    if member.bot == True:
+        await member.ban(reason=reason)
+        await ctx.message.delete()
+        await ctx.send(f'{member} has been banned.')
+    else:
+        dm = discord.Embed(title="You have been banned!", color=0xAA00FF)
+        dm.add_field(name="Moderator:",
+                        value=ctx.message.author.display_name)
+        dm.add_field(name="Reason:", value=f"{reason}")
+        dm.set_thumbnail(url=member.avatar_url)
+        await member.send(embed=dm)  # Send DM
+        await member.ban(reason=reason)  # Ban
+        await ctx.message.delete()  # Delete The Message
+        await ctx.send('member has been banned.') 
+
+@bot.command()
+@commands.has_permissions(ban_members=True)
+async def unban(ctx, *, member):
+    banned_users = await ctx.guild.bans()
+    member_name, member_discriminator = member.split('#')
+
+    for ban_entry in banned_users:
+        user = ban_entry.user
+
+        if (user.name, user.discriminator) == (member_name, member_discriminator):
+            await ctx.guild.unban(user)
+            await ctx.send(f'Unbanned {user.mention}')
+            return
+        
+@bot.command()
+@commands.has_permissions(kick_members=True)
+async def kick(ctx, member: discord.Member, *, reason='No reason provided.'):
+    if member.bot == True:
+        await member.kick(reason=reason)
+        await ctx.message.delete()
+        await ctx.send(f'{member} has been kicked.')
+    else:
+        dm = discord.Embed(title="You have been kicked!", color=0xAA00FF)
+        dm.set_thumbnail(url=member.avatar_url)
+        dm.add_field(name="Reason:", value=f"{reason}")
+        dm.add_field(name="Moderator:",
+                        value=ctx.message.author.display_name)
+        await member.send(embed=dm)  # Send DM
+        await member.kick(reason=reason)  # Kick
+        await ctx.message.delete()  # Delete The Message
+        await ctx.send('member has been kicked.')
+ 
+@bot.command()
+@commands.has_permissions(kick_members=True)
+async def mute(ctx, member: discord.Member=None):
+    if discord.utils.get(ctx.guild.roles, name="muted") is None:
+      guild = ctx.guild
+      await guild.create_role(name="muted")
+    if not member:
+        await ctx.send("Please specify a member.")
+        return
+    else:
+      role = discord.utils.get(ctx.guild.roles, name="muted")
+      await member.add_roles(role)
+      await ctx.send("Role added!")
     
 @bot.command()
-async def support(ctx, member : discord.Member= None):
-    member = ctx.author if not member else member
-    await ctx.send("The support server for AZ's Bot is https://discord.gg/NJ9mr9C!")
+@commands.has_permissions(kick_members=True)
+async def unmute(ctx, member: discord.Member = None):
+    role = discord.utils.get(ctx.guild.roles, name="muted")
+    if not member:
+        await ctx.send("Please specify a member.")
+        return
+    await member.remove_roles(role)
+    await ctx.send("Role removed!")
+
+@bot.command()
+@commands.has_permissions(manage_messages=True)
+async def clear(ctx, amount: int):
+    """Clears the amount of messages that you filled in."""
+    await ctx.channel.purge(limit=amount + 1)
+    await ctx.send(f"{amount} messages got deleted.")
     
 @bot.command()
 async def hello(ctx, member : discord.Member= None):
@@ -76,14 +152,20 @@ async def help(ctx):
 
     embed.set_thumbnail(
         url='https://images.emojiterra.com/twitter/v12/512px/1f3d3.png')
+    embed.add_field(name="*kick", value="Kicks a member.", inline=False)
+    embed.add_field(name="*ban", value="Bans a member.", inline=False)
+    embed.add_field(name="*mute", value="Mutes a member.", inline=False)
+    embed.add_field(name="*unmute", value="Unmutes a member.", inline=False)
+    embed.add_field(name="*unban", value="Unbans a user.", inline=False)
+    embed.add_field(name="*clear", value="Clears the amount of messages that you filled in.", inline=False)
     embed.add_field(name="*ping", value="Pings the bot.", inline=False)
     embed.add_field(name="*help", value="Gives this message.", inline=False)
+    embed.add_field(name="*support", value="Gets a link to the support server.", inline=False)
     embed.add_field(name="*yeet [@member]", value="Yeets someone.", inline=False)
     embed.add_field(name="*hello", value="Says hello to you.", inline=False)
     embed.add_field(name="*creepah", value="Aww man.", inline=False)
-    embed.add_field(name="*IdleGuild", value="Join the Idle Miner Guild!.", inline=False)
+    embed.add_field(name="*IdleGuild", value="Join the Idle Miner Guild!", inline=False)
     embed.add_field(name="*say", value="Says what you want!.", inline=False)
-    embed.add_field(name="*support", value="Get a link to the support server!.", inline=False)
     embed.set_footer(text=f"Request by {ctx.author}", icon_url=ctx.author.avatar_url)
 
     await ctx.send(embed=embed)
@@ -291,5 +373,9 @@ async def pingspam(ctx, member : discord.Member= None):
     await ctx.send("{}".format(member.mention))
     await ctx.send("Hello {}. I'm sorry that the process took so long. Heroku speeds SUCK".format(member.mention))
 
-        
+@bot.command()
+async def support(ctx, member : discord.Member= None):
+    member = ctx.author if not member else member
+    await ctx.send("The support server for AZ's Bot is https://discord.gg/NJ9mr9C!") 
+
 bot.run(os.getenv('TOKEN'))
