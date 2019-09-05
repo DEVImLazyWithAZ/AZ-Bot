@@ -13,6 +13,10 @@ async def on_ready():
     print('--------------------')
     return
 
+@bot.event
+async def on_ready():
+    await bot.change_presence(game=discord.Game(name="YOUR GAME"), status=discord.Status("STATUS"))
+
 bot.remove_command('help')
 
 @bot.command()
