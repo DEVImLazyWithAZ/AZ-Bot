@@ -13,6 +13,10 @@ async def on_ready():
     print('--------------------')
     return
 
+@bot.event
+channel = client.get_channel(619281826607005707)
+await channel.send('AZS Bot Launched')
+
 bot.remove_command('help')
 
 @bot.command()
