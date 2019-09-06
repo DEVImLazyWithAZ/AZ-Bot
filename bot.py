@@ -171,7 +171,7 @@ async def help(ctx):
     await ctx.send(embed=embed)
     
 @bot.command()
-@commands.has_any_role("Ping Spammer - Approved by ImLazyWithAZ")
+@commands.has_any_role("Ping Spammer - Approved by AZ")
 async def pingspam(ctx, member : discord.Member= None):
     await ctx.send("{}".format(member.mention))
     await ctx.send("{}".format(member.mention))
