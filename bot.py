@@ -48,6 +48,11 @@ async def yeet(ctx, member : discord.Member= None):
 async def IdleGuild(ctx, member : discord.Member= None):
     member = ctx.author if not member else member
     await ctx.send("Join the Idle Miner guild by Direct Messaging @ImLazyWithAZ#8327!")
+    
+@bot.command()
+async def ip(ctx, member : discord.Member= None):
+    member = ctx.author if not member else member
+    await ctx.send("!")
 
 @bot.command()
 @commands.has_permissions(ban_members=True)
